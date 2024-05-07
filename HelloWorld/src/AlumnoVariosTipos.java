@@ -11,6 +11,8 @@ public class AlumnoVariosTipos {
         System.out.println("El alumno vespertino entra a la escuela");
       } else if (turno.compareToIgnoreCase("sabatino") == 0) {
         System.out.println("El alumno sabatino entra a la escuela");
+      } else if (turno.compareToIgnoreCase("nocturno") == 0 ) {
+        System.out.println("Entra escuala nocturna");
       }
 
     }

@@ -17,25 +17,29 @@ public abstract class Alumno {
     this.tipoSangre = tipoSangre;
     setupMayorEdad();
   }
-  public void setEdad(int edad) {
-    this.edad = edad;
-    setupMayorEdad();
-  }
-  public void setEdad(float edad){
-    //this.edad = (int) edad; //cast transformar de un tipo de dato a otro
-    //setupMayorEdad();
-    setEdad((int) edad);
-  }
+
   public int getEdad() {
     return edad;
   }
+
   private void setupMayorEdad() {
-    if (edad >= 16) {
+    if (edad >= 18) {
       mayorEdad = true;
     } else {
       mayorEdad = false;
     }
   }
+
+  public void setEdad(int edad) {
+    this.edad = edad;
+    setupMayorEdad();
+  }
+
+  public void setEdad(float edad){
+    this.edad = (int) edad; //cast transformar de un tipo de dato a otro
+    setupMayorEdad();
+  }
+
   boolean getMayorEdad(){
     return mayorEdad;
   }

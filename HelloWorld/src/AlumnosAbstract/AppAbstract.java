@@ -8,11 +8,14 @@ public class AppAbstract {
     alumno.salirEscuela();
     alumno.listaMaterias();
     alumno.grado();
-
-      System.out.println(alumno.getMayorEdad());
-      alumno.mayorEdad = true;
-      System.out.println("Cambie la variable");
-      System.out.println(alumno.getMayorEdad());
+    System.out.println();
+    System.out.println(alumno.getMayorEdad());
+    System.out.println("Pasaron 4 años");
+    // alumno.setEdad(19);
+    alumno.setEdad(19.5f);
+    System.out.println("Cambie la variable");
+    System.out.println("Valor de edad: " + alumno.getEdad());
+    System.out.println(alumno.getMayorEdad());
 
   }
 }
