@@ -2,12 +2,12 @@ package AlumnosAbstract;
 
 // Clase abstracta Alumno
 public abstract class Alumno {
-  private String nombre;
-  private int edad;
-  private boolean mayorEdad;
-  private String curp;
-  private String genero;
-  private String tipoSangre;
+  String nombre;
+  int edad;
+  boolean mayorEdad;
+  String curp;
+  String genero;
+  String tipoSangre;
 
   public Alumno(String nombre, int edad, String curp, String genero, String tipoSangre) {
     this.nombre = nombre;
@@ -15,27 +15,8 @@ public abstract class Alumno {
     this.curp = curp;
     this.genero = genero;
     this.tipoSangre = tipoSangre;
-    setupMayorEdad();
   }
-  public void setEdad(int edad) {
-    this.edad = edad;
-    setupMayorEdad();
-  }
-  public void setEdad(float edad){
-    //this.edad = (int) edad; //cast transformar de un tipo de dato a otro
-    //setupMayorEdad();
-    setEdad((int) edad);
-  }
-  public int getEdad() {
-    return edad;
-  }
-  private void setupMayorEdad() {
-    if (edad >= 16) {
-      mayorEdad = true;
-    } else {
-      mayorEdad = false;
-    }
-  }
+  
   boolean getMayorEdad(){
     return mayorEdad;
   }
