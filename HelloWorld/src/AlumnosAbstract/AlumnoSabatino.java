@@ -4,6 +4,7 @@ package AlumnosAbstract;
 public class AlumnoSabatino extends Alumno {
   public AlumnoSabatino(String nombre, int edad, String curp, String genero, String tipoSangre) {
       super(nombre, edad, curp, genero, tipoSangre);
+      System.out.println("Constructor Sabatino");
   }
 
   @Override

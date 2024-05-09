@@ -11,10 +11,10 @@ public class AlumnoVariosTipos {
         System.out.println("El alumno vespertino entra a la escuela");
       } else if (turno.compareToIgnoreCase("sabatino") == 0) {
         System.out.println("El alumno sabatino entra a la escuela");
-      } else if (turno.compareToIgnoreCase("nocturno") == 0 ) {
-        System.out.println("Entra escuala nocturna");
+      } else if (turno.compareToIgnoreCase("nocturno") == 0) {
+        System.out.println("Alumno nocturno, entra a la escuela");
       }
-
+      System.out.println();
     }
 
     void salirEscuela() {
@@ -24,6 +24,8 @@ public class AlumnoVariosTipos {
         System.out.println("El alumno vespertino sale de la escuela");
       } else if (turno.compareToIgnoreCase("sabatino") == 0) {
         System.out.println("El alumno sabatino sale de la escuela");
+      } else if (turno.compareToIgnoreCase("nocturno") == 0) {
+        System.out.println("Alumno nocturno, sale de la escuela");
       }
     }
 
@@ -34,6 +36,8 @@ public class AlumnoVariosTipos {
         System.out.println("Lista de materias del alumno vespertino");
       } else if (turno.compareToIgnoreCase("sabatino") == 0) {
         System.out.println("Lista de materias del alumno sabatino");
+      } else if (turno.compareToIgnoreCase("nocturno") == 0) {
+        System.out.println("Alumno nocturno, lista de materias");
       }
     }
 
@@ -44,6 +48,8 @@ public class AlumnoVariosTipos {
         System.out.println("Grado del alumno vespertino");
       } else if (turno.compareToIgnoreCase("sabatino") == 0) {
         System.out.println("Grado del alumno sabatino");
+      } else if (turno.compareToIgnoreCase("nocturno") == 0) {
+        System.out.println("Alumno nocturno, regresa grado");
       }
       
     }
