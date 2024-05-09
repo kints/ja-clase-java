@@ -11,6 +11,7 @@ public class Division {
     int denominador = scanner.nextInt();
     int resultado = dividir(numerador, denominador);
     System.out.println("El resultado de la división es: " + resultado);
+    scanner.close();
   }
 
   public static int dividir(int numerador, int denominador) {

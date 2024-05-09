@@ -15,6 +15,8 @@ public class Division {
       System.out.println("El resultado de la división es: " + resultado);
     } catch (ArithmeticException e) {
       System.out.println("Error: No se puede dividir por cero.");
+    } finally {
+      scanner.close();
     }
   }
 
