@@ -2,6 +2,7 @@ package AlumnosAbstract;
 
 // Clase AlumnoMatutino
 public class AlumnoMatutino extends Alumno {
+    private String menuDesayuno = "huevito con frijoles";
   public AlumnoMatutino(String nombre, int edad, String curp, String genero, String tipoSangre) {
       super(nombre, edad, curp, genero, tipoSangre);
   }
