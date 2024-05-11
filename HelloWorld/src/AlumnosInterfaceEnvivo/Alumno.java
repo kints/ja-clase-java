@@ -1,6 +1,9 @@
 package AlumnosInterfaceEnvivo;
 
 public class Alumno {
+  public static final String GENERO_FEMENINO = "Femenino";
+  public static final String GENERO_MASCULINO = "Masculino";
+
   private String nombre;
   private int edad;
   private String curp;
@@ -8,11 +11,15 @@ public class Alumno {
   private String tipoSangre;
 
   public Alumno(String nombre, int edad, String curp, String genero, String tipoSangre) {
-      this.nombre = nombre;
-      this.edad = edad;
-      this.curp = curp;
-      this.genero = genero;
-      this.tipoSangre = tipoSangre;
+    this.nombre = nombre;
+    this.edad = edad;
+    this.curp = curp;
+    this.genero = genero;
+    this.tipoSangre = tipoSangre;
+}
+
+  public final void muestraAlgo(){
+    System.out.println("No me puedes sobre escribir");
   }
 
   public String getNombre() {
@@ -25,10 +32,6 @@ public class Alumno {
 
   public int getEdad() {
     return edad;
-  }
-
-  public void setEdad(int edad) {
-    this.edad = edad;
   }
 
   public String getCurp() {
@@ -54,4 +57,7 @@ public class Alumno {
   public void setTipoSangre(String tipoSangre) {
     this.tipoSangre = tipoSangre;
   }
+
+  
+
 }

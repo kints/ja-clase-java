@@ -1,4 +1,4 @@
-package AlumnosInterfaceEnvivo.interfaces;
+package AlumnosInterfaceEnvivo.interfaz;
 
 public interface AccionesAlumno {
   void entrarEscuela();

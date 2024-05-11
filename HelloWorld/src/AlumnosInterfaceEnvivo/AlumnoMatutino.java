@@ -1,6 +1,6 @@
 package AlumnosInterfaceEnvivo;
 
-import AlumnosInterfaceEnvivo.interfaces.AccionesAlumno;
+import AlumnosInterfaceEnvivo.interfaz.AccionesAlumno;
 
 public class AlumnoMatutino extends Alumno implements AccionesAlumno {
 
@@ -8,22 +8,30 @@ public class AlumnoMatutino extends Alumno implements AccionesAlumno {
     super(nombre, edad, curp, genero, tipoSangre);
   }
 
+  public static int muestraMensaje(){
+    System.out.println("Este es el método estático");
+    return 1;
+  }
+
+  @Override
+  public void muestraAlgo()
+
+  @Override
   public void entrarEscuela(){
-    System.out.println("Alumno entra a la escuela en la mañana");
-    System.out.println("El alumno recibe su desayuno escolar");
+    System.out.println("Alumno llega sin desayunar a la escuela");
+    System.out.println("Alumno recibe su desayuno escolar");
   }
-
+  @Override
   public void salirEscuela(){
-    System.out.println("Alumno guarda sus cosas");
-    System.out.println("Espera en la puerta a que llegue su familiar");
-    System.out.println("Alumno sale de al escuela con su familiar");
+    System.out.println("Alumno se acerca a la salida y espera a su familiar");
+    System.out.println("El familiar llega y se lleva al alumno");
   }
-
+  @Override
   public void grado(){
-    System.out.println("El grado escolar del Alumno");
+    System.out.println("Grado escolar del alumno de la mañana");
   }
-
+  @Override
   public void listaMaterias(){
-    System.out.println("La lista de materias de la mañana");
+    System.out.println("Lista de materias que cursa el alumno matutino");
   }
 }
