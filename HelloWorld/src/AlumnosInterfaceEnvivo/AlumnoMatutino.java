@@ -2,7 +2,7 @@ package AlumnosInterfaceEnvivo;
 
 import AlumnosInterfaceEnvivo.interfaz.AccionesAlumno;
 
-public class AlumnoMatutino extends Alumno implements AccionesAlumno {
+public class AlumnoMatutino extends Alumno implements AccionesAlumno  {
 
   public AlumnoMatutino(String nombre, int edad, String curp, String genero, String tipoSangre) {
     super(nombre, edad, curp, genero, tipoSangre);
@@ -12,9 +12,6 @@ public class AlumnoMatutino extends Alumno implements AccionesAlumno {
     System.out.println("Este es el método estático");
     return 1;
   }
-
-  @Override
-  public void muestraAlgo()
 
   @Override
   public void entrarEscuela(){
@@ -34,4 +31,6 @@ public class AlumnoMatutino extends Alumno implements AccionesAlumno {
   public void listaMaterias(){
     System.out.println("Lista de materias que cursa el alumno matutino");
   }
+
+  
 }

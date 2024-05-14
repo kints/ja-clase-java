@@ -9,6 +9,12 @@ public class Alumno {
   private String curp;
   private String genero;
   private String tipoSangre;
+  private boolean mayorEdad;
+
+  public boolean isMayorEdad() {
+    return mayorEdad;
+  }
+
 
   public Alumno(String nombre, int edad, String curp, String genero, String tipoSangre) {
     this.nombre = nombre;
@@ -16,10 +22,19 @@ public class Alumno {
     this.curp = curp;
     this.genero = genero;
     this.tipoSangre = tipoSangre;
+
+    this.mayorEdad = Alumno.esMayorEdad(this.edad);
 }
 
+public static boolean esMayorEdad(int edad){
+  if (edad >= 18 ){
+    return true;
+  }
+  return false;
+}   
+
   public final void muestraAlgo(){
-    System.out.println("No me puedes sobre escribir");
+    System.out.println("este metodo no se puede hacer override, es final");
   }
 
   public String getNombre() {

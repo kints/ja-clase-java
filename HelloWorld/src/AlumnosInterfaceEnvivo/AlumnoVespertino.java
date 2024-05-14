@@ -8,6 +8,7 @@ public class AlumnoVespertino extends Alumno implements AccionesAlumno {
     super(nombre, edad, curp, genero, tipoSangre);
   }
 
+
   @Override
   public void entrarEscuela() {
     System.out.println("El alumno ya comido llega a la escuela");
