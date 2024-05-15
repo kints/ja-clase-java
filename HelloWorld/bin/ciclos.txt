@@ -1,0 +1,84 @@
+//De 0 a 4
+        for (int i = 0; i < 5; i++){
+            //De 10 a 6
+            for (int j = 10; j > 5; j--){
+                System.out.println("Valor i: " + i + " Valor j: " + j);
+            }
+        }
+        //Cuidado con ciclos infitos
+        for (int a = 1; ; ){
+
+        }
+        for (int b = 0; ; b){
+            
+        }
+        // cuando se tiene tiene que repetir acciones y minimo tiene que ejecutarse 1 vez
+        int contar = 0;
+        //hacer
+        do {
+            contar++;
+            System.out.println("contando: " + contar);
+        //mientras verdadero
+        } while (contar < 10);
+
+        String concatenar = "";
+        //a veces tenemos que hacer una validación antes de ejecutar las operaciones
+        while (concatenar.length() < 5) {
+            concatenar += "a"; 
+            System.out.println("Con la candena a: "+concatenar.length());
+            System.out.println("Contanido cadena: "+concatenar);
+        }
+
+        //a veces queremos repetir acciones pero queremos cuando encontramos un valor salir del ciclo, sin esperar que este termine
+
+        //De 0 a 10, pero queremos encontrar el segundo par
+        int cuentoPares = 0;
+        for ( int i = 1; i < 10; i++){
+            cuentoPares += (i % 2 = 0 ? 1 : 0)
+            System.out.println("Valor i: " + i + " Cuento pares: " + cuentoPares);
+            if (cuentoPares == 2){
+                System.out.println("El segundo par: " + i)
+                break;
+            }
+        }
+
+        //De 0 a 10, pero impimir solo los impares
+        cuentoPares = 0;
+        for ( int i = 1; i < 5; i++){    
+            if (i % 2 == 0 ? true : false){
+                continue;
+            }
+            System.out.println("Valor i: " + i);
+        }
+
+
+        //Arreglo de Strings
+        String[] nombres = {"Arturo","Desiree","Marel","Francisco","María","Alberto"};
+        //recorrer los nombres 
+        for (int o = 0; o < nombres.length; o++){
+            System.out.println("En posición: " + o + " nombre: " + nombres[o]);
+        }
+        
+        //recorrer nombres sin iterador, se mueve automáticamente por el arreglo
+        for (String iteradorNombre : nombres) {
+            System.out.println(iteradorNombre);
+        }
+
+
+        int[][] arreglo2Dim = new int[5][5];
+        //poner el valor de cada primera dimension en todos los valores de la segunda dimension
+        for (int primeraDim = 0; primeraDim < 5 ; primeraDim++) {
+            for( int segundaDim = 0 ; segundaDim < 5; segundaDim++){
+                arreglo2Dim[primeraDim][segundaDim] = primeraDim;
+            }
+        }
+
+        //pintar todos los valores del arreglo de 2 dim cada renglon por primera dimension 
+        String valoresDimencion = "";
+        for (int primeraDim = 0; primeraDim < 5 ; primeraDim++) {
+            valoresDimencion = "Dimension " + primeraDim + "valores: ";
+            for(int segundaDim = 0 ; segundaDim < 5; segundaDim++){
+                valoresDimencion += arreglo2Dim[primeraDim][segundaDim] + " ";
+            }
+            System.out.println(valoresDimencion);
+        }

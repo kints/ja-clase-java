@@ -1,0 +1,32 @@
+package PaquetePersona;
+import PaquetePersona.Persona;
+
+public class EjemploPersonaCopy{
+    public static void Main (String[] Args){
+        Persona persona1;
+        System.out.println(persona1.nombre);
+
+
+
+
+        persona1 = new Persona();
+        System.out.println(persona1.nombre);
+        persona1.nombre = "Federico Martinez Hernandez";
+        System.out.println("Nombre: " + persona1.nombre);
+        System.out.println("Edad: " + persona1.edad);
+        System.out.println("Genero: " + persona1.genero);
+        System.out.println("Mayor de edad: " + persona1.esMayorEdad);
+
+        Persona persona2;
+
+        persona2 = new Persona("Saray Espino Garcia", 14, "Femenino");
+        System.out.println("Nombre: " + persona2.nombre);
+        System.out.println("Edad: " + persona2.edad);
+        System.out.println("Genero: " + persona2.genero);
+        System.out.println("Mayor de edad: " + persona2.esMayorEdad);
+        
+        persona2.esMayorEdad = true;
+        System.out.println("Mayor de edad: " + persona2.esMayorEdad);
+
+    }
+}
