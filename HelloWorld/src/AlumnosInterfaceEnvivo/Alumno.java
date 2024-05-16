@@ -12,6 +12,16 @@ public class Alumno {
   private String tipoSangre;
   private boolean mayorEdad;
 
+  public static boolean validadorMayorEdad(int edad){
+    if (edad >= 18) {
+      return true;
+    } 
+    return false;
+  }
+
+  public final void muestraAlgo(){
+    System.out.println("Imprimo algo en pantalla");
+  }
 
   public Alumno(String nombre, int edad, String curp, String genero, String tipoSangre) {
     this.nombre = nombre;
@@ -19,21 +29,10 @@ public class Alumno {
     this.curp = curp;
     this.genero = genero;
     this.tipoSangre = tipoSangre;
-    this.mayorEdad = validarMayorEdad(this.edad);
-}
-  public static boolean validarMayorEdad(int edad){
-    if (edad >= 18) {
-      return true;
-    }
-    return false;
-  }
 
-  public final String cuidadosTipoSangre() {
-    if (tipoSangre.compareToIgnoreCase("O-") == 0){
-      return "Cuidado con este alumno tiene un tipo de sangre dificil de conseguir";
-    }
-    return "No cuidados emergentes";
-  }
+    this.mayorEdad = Alumno.validadorMayorEdad(this.edad);
+}
+
 
   public String getNombre() {
     return nombre;
@@ -52,7 +51,7 @@ public class Alumno {
 
   public void setEdad(int edad) {
     this.edad = edad;
-    this.mayorEdad = validarMayorEdad(this.edad);
+    this.mayorEdad = Alumno.validadorMayorEdad(this.edad);
   }
 
 
@@ -89,7 +88,5 @@ public class Alumno {
   public boolean isMayorEdad() {
     return mayorEdad;
   }
-
   
-
 }

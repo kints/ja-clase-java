@@ -2,37 +2,23 @@ package AlumnosInterfaceEnvivo;
 
 public class AppInterface {
   public static void main(String[] args) {
+    // AlumnoMatutino alumno1 = new AlumnoMatutino("Ingrid Salinas",22,
+    // "INSA34562346",Alumno.GENERO_FEMENINO,"AB+");
 
-    System.out.println("Es mayor de edad?: " + Alumno.validarMayorEdad(18));
+    // System.out.println("La alumna(o) " +alumno1.getNombre() + " tiene: " + alumno1.getEdad() + " años.");
+    // System.out.println("Genero "+ alumno1.getGenero());
+System.out.println("-----------Alumno 2--------");
+    AlumnoVespertino alumno2 = new AlumnoVespertino("Marcela Puente Fajardo", 15, 
+    "MAPU345908DFG", Alumno.GENERO_FEMENINO, "O-");
+  
+    System.out.println("La alumna(o) " +alumno2.getNombre() + " tiene: " + alumno2.getEdad() + " años.");
+    System.out.println("Genero "+ alumno2.getGenero());
 
-    AlumnoMatutino alumno1 = new AlumnoMatutino("Neira Plascencia", 15,"NEPLA4352345",
-    Alumno.GENERO_FEMENINO, "O-");
-    // alumno1.entrarEscuela();
-    // alumno1.salirEscuela();
-    // alumno1.grado();
-    // alumno1.listaMaterias();
-    System.out.println();
-    System.out.println(alumno1.getNombre());
-    System.out.println("Edad: "+ alumno1.getEdad());
-    System.out.println("¿Es mayor de edad?: "+ alumno1.isMayorEdad());
-    System.out.println("Pasaron 5 años");
-    alumno1.setEdad(20);
-    System.out.println("¿Es mayor de edad?: "+ alumno1.isMayorEdad());
-    System.out.println();
-    System.out.println(alumno1.cuidadosTipoSangre());
-
-// System.out.println("------------Segundo Alumno----------");
-
-//     AlumnoVespertino alumno2 =  new AlumnoVespertino("Carla con C", 21, "CACC345234ASDF",
-//     Alumno.GENERO_FEMENINO, "O+");
-
-//     alumno2.entrarEscuela();
-//     alumno2.salirEscuela();
-//     alumno2.grado();
-//     alumno2.listaMaterias();
-//     System.out.println();
-//     System.out.println(alumno2.getNombre());
-//     System.out.println(alumno2.getGenero());
-
+    System.out.println("Edad de alumno "+ alumno2.getEdad() + "¿Es mayor de edad? "+ alumno2.isMayorEdad());
+    System.out.println("Pasaron 11 años");
+    alumno2.setEdad(26);
+    System.out.println("Edad de alumno "+ alumno2.getEdad() + "¿Es mayor de edad? "+ alumno2.isMayorEdad());
+  
+    alumno2.muestraAlgo();
   }
 }

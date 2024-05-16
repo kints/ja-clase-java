@@ -1,6 +1,6 @@
 package AlumnosInterfaceEnvivo;
 
-import AlumnosInterface.AccionesAlumno;
+import AlumnosInterfaceEnvivo.interfaz.AccionesAlumno;
 
 public class AlumnoVespertino extends Alumno implements AccionesAlumno {
 
@@ -10,25 +10,28 @@ public class AlumnoVespertino extends Alumno implements AccionesAlumno {
   }
 
   @Override
+  public void muestraAlgo()
+
+  @Override
   public void entrarEscuela() {
-    System.out.println("Alumno ya comido entra a la escuela");
-    System.out.println("Alumno entra directo a clases");
+    System.out.println("Alumno de la tarde entra a la escuela");
+    System.out.println("Ya comio entonces directo a estudiar");
   }
 
   @Override
   public void salirEscuela() {
-    System.out.println("Alumno se acerca a la salida esperando su familiar");
-    System.out.println("Llega el familiar y se lleva al alumno a cenar");
-  }
-
-  @Override
-  public void listaMaterias() {
-    System.out.println("Lista de materias de la tarde");
+    System.out.println("Alumno despues de jugar se acerca a la salida");
+    System.out.println("llega su familiar y se va el alumno");
   }
 
   @Override
   public void grado() {
     System.out.println("Grado escolar del alumno de la tarde");
+  }
+
+  @Override
+  public void listaMaterias() {
+    System.out.println("Lista de materias del alumno vespertino");
   }
 
 }
