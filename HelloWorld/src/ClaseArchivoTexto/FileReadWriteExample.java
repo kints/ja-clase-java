@@ -35,9 +35,12 @@ public class FileReadWriteExample {
     }
 
     public static void escribirEnArchivo(String fileName, String contenido) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+        BufferedWriter writer;
+        try  {
+            writer = new BufferedWriter(new FileWriter(fileName));
             writer.write(contenido);
             System.out.println("Contenido escrito en el archivo.");
+            writer.close();
         } catch (IOException e) {
             System.err.println("Error al escribir en el archivo: " + e.getMessage());
         }
