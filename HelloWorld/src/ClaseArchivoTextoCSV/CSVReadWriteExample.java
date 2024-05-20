@@ -46,7 +46,7 @@ public class CSVReadWriteExample {
         }
     }
 
-    public static List<String[]> leerRegistrosCSV(String fileName) {
+    public static List<String[]> leerRegistrosCSV(String fileName) throws IOException {
         List<String[]> registros = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String linea;

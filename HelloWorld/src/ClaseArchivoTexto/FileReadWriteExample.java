@@ -1,7 +1,7 @@
 package ClaseArchivoTexto;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
+import java.io.PrintWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,15 +9,24 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
+import ClaseArchivoTexto.domain.Alumno;
 
 public class FileReadWriteExample {
+    
+    
     public static void main(String[] args) {
+        Alumno[] alumnos = {
+            new Alumno("Marcela Puente Fajardo", 15,"MAPU345908DFG", Alumno.GENERO_FEMENINO, "O-"),
+            new Alumno("Ingrid Salinas",22, "INSA34562346",Alumno.GENERO_FEMENINO,"AB+"),
+            new Alumno("Arturo Quintos",15, "QUNA861024HDFNGR01", "Masculino", "A+"),
+            new Alumno("Esmeralda Orozco", 22, "OOFE9807234D0", "Femenino", "O+")
+        };
         // Crear un archivo de texto
         String fileName = "archivo.txt";
         crearArchivo(fileName);
 
         // Escribir en el archivo
-        escribirEnArchivo(fileName, "Hola, este es un archivo de texto.");
+        escribirEnArchivo(fileName, alumnos);
 
         // Leer el archivo
         List<String> lineas = leerArchivo(fileName);
@@ -34,11 +43,13 @@ public class FileReadWriteExample {
         }
     }
 
-    public static void escribirEnArchivo(String fileName, String contenido) {
-        BufferedWriter writer;
+    public static void escribirEnArchivo(String fileName, Alumno[] alumnos) {
+        PrintWriter writer = null;
         try  {
-            writer = new BufferedWriter(new FileWriter(fileName));
-            writer.write(contenido);
+            writer = new PrintWriter(new FileWriter(fileName));
+            for (Alumno alumno : alumnos) {
+                writer.write(alumno.toString());    
+            }
             System.out.println("Contenido escrito en el archivo.");
             writer.close();
         } catch (IOException e) {
