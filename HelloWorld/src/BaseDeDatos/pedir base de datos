@@ -186,3 +186,36 @@ VALUES
         TRUE,
         NULL
     );
+
+
+--Queries practica SELECT
+SELECT * FROM alumno;
+SELECT id, nombre, apellido_paterno, apellido_materno, activo FROM alumno;
+
+SELECT nombre, apellido_paterno genero, fecha_nacimiento, tipo_sangre FROM alumno
+	WHERE apellido_paterno ilike '%ez'
+	and fecha_nacimiento BETWEEN '2013-07-01' AND '2013-12-31'
+	OR tipo_sangre = 'AB+';
+
+SELECT nombre, apellido_materno genero, fecha_nacimiento, tipo_sangre FROM alumno
+	WHERE apellido_materno ilike '%e_';
+
+SELECT nombre, apellido_materno genero, fecha_nacimiento, tipo_sangre, activo FROM alumno
+	WHERE activo = TRUE;
+
+--Insert Calificacion_parcial y select JOIN calificacion_parcial con materia y alumno
+INSERT INTO calificacion_parcial (alumno_id,materia_id,calificacion_parcial,periodo,nombre_parcial,fecha_parcial) 
+VALUES (
+	'40b7e6e2-479a-432b-ac3f-e65505da0370',
+	'80f748b6-f05a-4339-8836-a68148533cbf',
+	8.5,
+	'2023-2024',
+	'1er. Bimestre',
+	'2023-10-05'
+)
+
+SELECT a.nombre, a.apellido_paterno, a.apellido_materno, m.nombre_materia,
+	cp.calificacion_parcial, cp.nombre_parcial
+	FROM calificacion_parcial cp
+	JOIN alumno a ON cp.alumno_id = a.id
+	JOIN materia m ON cp.materia_id = m.id ;

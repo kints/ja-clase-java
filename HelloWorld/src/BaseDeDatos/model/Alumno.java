@@ -4,6 +4,7 @@ import java.sql.Date;
 import java.util.UUID;
 
 public class Alumno {
+
     private UUID id;
     private String matricula;
     private String nombre;
@@ -14,6 +15,19 @@ public class Alumno {
     private String curp;
     private String genero;
     private boolean activo;
+    private Date fechaBaja;
+
+    public Date getFechaBaja() {
+        return fechaBaja;
+    }
+
+    public void setFechaBaja(Date fechaBaja) {
+        this.fechaBaja = fechaBaja;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }
 
     public Alumno(String matricula, String nombre, String apellidoPaterno, String apellidoMaterno, Date fechaNacimiento, String tipoSangre, String curp, String genero) {
         this.id = UUID.randomUUID();
@@ -66,5 +80,16 @@ public class Alumno {
 
     public boolean isActivo() {
         return activo;
+    }
+
+    @Override
+    public String toString() {
+        return "Alumno [id=" + id + ", matricula=" + matricula + ", nombre=" + nombre + ", apellidoPaterno="
+                + apellidoPaterno + ", apellidoMaterno=" + apellidoMaterno + ", fechaNacimiento=" + fechaNacimiento
+                + ", tipoSangre=" + tipoSangre + ", curp=" + curp + ", genero=" + genero + ", activo=" + activo + "]";
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 }
