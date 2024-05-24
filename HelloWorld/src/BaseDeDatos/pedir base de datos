@@ -214,6 +214,24 @@ VALUES (
 	'2023-10-05'
 )
 
+INSERT INTO calificacion_parcial (alumno_id,materia_id,calificacion_parcial,periodo,nombre_parcial,fecha_parcial) 
+	VALUES (
+	'0f33073d-6ee0-45d2-ac07-aed1cd4f2401',--remplazar por ID de pedro
+	'13f8256a-9a5e-432d-becd-92b7bb271cd1',--reemplazar por ID de una materia
+	7,
+	'2023-2024',
+	'1er Bimestre',
+	'2023-10-05'
+	),
+	(
+	'0f33073d-6ee0-45d2-ac07-aed1cd4f2401',--remplazar por ID de pedro
+	'6d7ad9c3-72cc-41fb-9eb9-cf37c31a5071',--reemplazar por ID de una otra materia
+	8.5,
+	'2023-2024',
+	'1er Bimestre',
+	'2023-10-05'
+	);
+
 SELECT a.nombre, a.apellido_paterno, a.apellido_materno, m.nombre_materia,
 	cp.calificacion_parcial, cp.nombre_parcial
 	FROM calificacion_parcial cp
