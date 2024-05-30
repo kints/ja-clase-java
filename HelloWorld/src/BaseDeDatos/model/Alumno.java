@@ -15,7 +15,16 @@ public class Alumno {
     private String curp;
     private String genero;
     private boolean activo;
+    private Date fechaAlta;
     private Date fechaBaja;
+
+    public Date getFechaAlta() {
+        return fechaAlta;
+    }
+
+    public void setFechaAlta(Date fechaAlta) {
+        this.fechaAlta = fechaAlta;
+    }
 
     public Date getFechaBaja() {
         return fechaBaja;
@@ -29,7 +38,8 @@ public class Alumno {
         this.activo = activo;
     }
 
-    public Alumno(String matricula, String nombre, String apellidoPaterno, String apellidoMaterno, Date fechaNacimiento, String tipoSangre, String curp, String genero) {
+    public Alumno(String matricula, String nombre, String apellidoPaterno, String apellidoMaterno, Date fechaNacimiento,
+            String tipoSangre, String curp, String genero) {
         this.id = UUID.randomUUID();
         this.matricula = matricula;
         this.nombre = nombre;
